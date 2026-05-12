@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2C1810"
+    android:padding="8dp">
+    
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+        
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="分数: 0"
+            android:textColor="#FFE4C4"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按开始游戏"
+            android:textColor="#B8860B"
+            android:textSize="14sp"/>
+    </LinearLayout>
+    
+    <!-- Game View -->
+    <com.qclaw.snake.SnakeView
+        android:id="@+id/snakeView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="4dp"/>
+    
+    <!-- Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="开始游戏"
+            android:textSize="16sp"
+            android:background="#228B22"
+            android:textColor="#FFFFFF"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+            
+            <Button
+                android:id="@+id/upBtn"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:text="↑"
+                android:textSize="20sp"
+                android:background="#8B4513"
+                android:textColor="#FFE4C4"/>
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <Button
+                    android:id="@+id/leftBtn"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:text="←"
+                    android:textSize="20sp"
+                    android:background="#8B4513"
+                    android:textColor="#FFE4C4"/>
+                
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"/>
+                
+                <Button
+                    android:id="@+id/rightBtn"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:text="→"
+                    android:textSize="20sp"
+                    android:background="#8B4513"
+                    android:textColor="#FFE4C4"/>
+            </LinearLayout>
+            
+            <Button
+                android:id="@+id/downBtn"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:text="↓"
+                android:textSize="20sp"
+                android:background="#8B4513"
+                android:textColor="#FFE4C4"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
